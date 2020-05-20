@@ -10,7 +10,6 @@ font-family: 'Libre Baskerville', serif;
 body {
     background-image: linear-gradient(to top, #ffecd2, #fddfc2,
     #fdd2b4, #fcc4a8, #fcb69f);
-
     font-family: 'Libre Baskerville', serif;
 
 }
@@ -147,4 +146,24 @@ button {
     width: 60px;
     height: 30px;
     margin-left: 25px;
+}
+
+@media screen and (max-width: 666px) {
+    .wrapper {
+        grid-template-areas: "header""aside" "article";
+        grid-template-columns: 1fr;
+        grid-template-rows: 130px 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .time-data{
+        margin: auto 10px;
+    }
+
+    .time-data div{
+        display: block;
+    }
+
 }
