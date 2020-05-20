@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>budget-app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Libre+Baskerville:wght@700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h2><span class="h_color">Budget</span>
+            calculation <span class="h_color">appl</span>ication</h2>
+    </header>
+
+    <aside>
+        <div class="data">
+            <div class="choose-expenses"><h3>Enter required expenses</h3></div>
+            <input class="expenses-item" type="text" id="expenses_1"
+                   placeholder="Name">
+            <input class="expenses-item" type="text" id="expenses_2"
+                   placeholder="Cost">
+            <input class="expenses-item" type="text" id="expenses_3"
+                   placeholder="Name">
+            <input class="expenses-item" type="text" id="expenses_4"
+                   placeholder="Cost">
+            <button class="expenses-item-btn">approve</button>
+
+            <div class="expenses">
+                <div class="optionalexpenses"><h4>
+                    Enter optional expenses</h4>
+                </div>
+                <input class="optionalexpenses-item" type="text"
+                       id="optionalexpenses_1">
+                <input class="optionalexpenses-item" type="text"
+                       id="optionalexpenses_2">
+                <input class="optionalexpenses-item" type="text"
+                       id="optionalexpenses_3">
+                <button class="optionalexpenses-btn">approve</button>
+            </div>
+
+            <div class="count-budget"><h3>Daily budget calculation</h3></div>
+            <button class="count-budget-btn">
+                calculate
+            </button>
+
+            <div class="choose-income-label"><h4>
+                Enter comma separated income items</h4>
+            </div>
+            <input class="choose-income" type="text" id="income">
+
+            <div class="savings">
+                <div class="checksavings">
+                    <p>Are there any accumulations ?:
+                        <input id="savings" type="checkbox"/>
+                    </p>
+                </div>
+
+                <label for="sum">amount</label>
+                <input class="choose-sum" id="sum" type="text">
+                <label for="percent">
+                    percent</label>
+                <input class="choose-percent" id="percent" type="text">
+            </div>
+
+            <div class="open">
+                <button class="start" id="start">
+                    Start calc
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <article>
+        <div class="result">
+            <div class="result-table">
+                <div class="budget"><h3>Income:</h3>
+                    <div class="budget-value"></div>
+                </div>
+
+                <div class="daybudget">Budget<br> 1 day:
+                    <div class="daybudget-value"></div>
+                </div>
+
+                <div class="level">
+                    Income<br> level:
+                    <div class="level-value"></div>
+                </div>
+
+                <div class="expenses">Required<br>expenses:
+                    <div class="expenses-value"></div>
+                </div>
+
+                <div class="optionalexpenses">Possible<br>expenses:
+                    <div class="optionalexpenses-value"></div>
+                </div>
+
+                <div class="income">Additional<br> income:
+                    <div class="income-value"></div>
+                </div>
+
+                <div class="monthsavings">Savings<br> for 1 month:
+                    <div class="monthsavings-value"></div>
+                </div>
+
+                <div class="yearsavings">Savings<br>for 1 year:
+                    <div class="yearsavings-value"></div>
+                </div>
+
+            </div>
+
+            <div class="time-data">
+                <div class="year">
+                    Year:
+                    <input class="year-value" type="text" readonly>
+                </div>
+                <div class="month">
+                    Month:
+                    <input class="month-value" type="text" readonly>
+                </div>
+                <div class="day">
+                    Day:
+                    <input class="day-value" type="text" readonly>
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="js/main.js"></script>
+</body>
+</html>

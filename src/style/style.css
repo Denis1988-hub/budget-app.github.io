@@ -1,0 +1,150 @@
+/*  font-family: 'Amiri', serif;
+font-family: 'Libre Baskerville', serif;
+
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top, #ffecd2, #fddfc2,
+    #fdd2b4, #fcc4a8, #fcb69f);
+
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+
+.wrapper {
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "header header" "aside article";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 10px;
+    grid-gap: 10px;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    color: indigo;
+    font-family: 'Amiri', serif;
+    font-size: x-large;
+}
+
+.h_color {
+    color: black;
+}
+
+
+aside {
+    grid-area: aside;
+    border: 1px solid black;
+    text-align: center;
+    background: #FDFCFB;
+    background: -webkit-linear-gradient(top left, #FDFCFB, #E2D1C3);
+    background: -moz-linear-gradient(top left, #FDFCFB, #E2D1C3);
+    background: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+
+}
+
+article {
+    grid-area: article;
+    border: 1px solid black;
+    font-weight: bold;
+    background: #FDFCFB;
+    background: -webkit-linear-gradient(top left, #FDFCFB, #E2D1C3);
+    background: -moz-linear-gradient(top left, #FDFCFB, #E2D1C3);
+    background: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+}
+
+
+input {
+    height: 30px;
+    /*width: calc((100%/2) - 4px);*/
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px 0 rgba(1, 0, 42, .1);
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #a7a7a7;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: orange;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px 0 rgba(1, 0, 42, .1);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Libre Baskerville', serif;
+    cursor: pointer;
+}
+
+.data {
+
+}
+
+.data div {
+    margin-top: 10px;
+}
+
+
+
+.expenses input {
+    width: 32%;
+    display: inline-block;
+}
+
+.savings input {
+    width: 20%;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.checksavings input {
+    width: 18px;
+}
+
+
+.open button {
+    width: 200px;
+    margin: 20px auto;
+    font-size: x-large;
+}
+
+.result-table div {
+    margin-left: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+.budget-value{
+    margin-top: 10px;
+}
+
+.time-data{
+    margin: 20px 10px;
+}
+
+.time-data div{
+    display: inline-grid;
+}
+
+.time-data div input{
+    width: 60px;
+    height: 30px;
+    margin-left: 25px;
+}
