@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic-ext"
+          rel="stylesheet">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid-layout</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="logo_defiz">
+            <h1>The best or nothing </h1>
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" title="Home">Главная</a></li> <!--title - экранная подсказка-->
+                <li><a href="#" title="About">Купить</a></li>
+                <li><a href="#" title="Work">Сервис</a></li>
+                <li><a href="#" title="Contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slideShow-container">
+
+        <div class="mySlides">
+            <img src="img/mers.jpg" alt="">
+        </div>
+
+        <div class="mySlides">
+            <img src="img/mers2.jpg" alt="">
+        </div>
+
+        <div class="mySlides">
+            <img src="img/mers3.jpg" alt="">
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+
+    <section class="section">
+        <h1>Технические данные</h1>
+        <p>Открытый автомобиль Mercedes 190 SL называли кабриолетом из-за трёхместной компоновки салона.
+            Двигатель ставили один — новый четырёхцилиндровый агрегат рабочим объёмом 1,9 л.
+            «Четвёрка» получилась путём отсечения двух цилиндров от рядного мотора родстера 300 SL Gullwing.
+            У двух двигателей одинаковый диаметр цилиндра (85 мм), но ход поршня уменьшился с 88 до 83,6 мм.
+            На «сто девяностом» мотор, оснащённый двумя карбюраторами Solex, выдавал 105 сил и 142 Н•м. Кабриолет
+            (сухая масса — 1160 кг) комплектовался полностью синхронизированной «механикой» с четырьмя ступенями и мог
+            разгоняться до 171 км/ч. Покупателям были доступны машины как с мягким верхом (цена — $3998), так и с
+            демонтируемым
+            жёстким ($4295). Производство в Штутгарте шло с 1955 по 1963 год, а всего был сделан 25 881 автомобиль. </p>
+    </section>
+
+    <aside class="aside">
+        <h1>История</h1>
+        <p>История модели Mercedes SL уходит корнями в 1954 год — именно тогда на автосалоне
+            Нью-Йорке немцы представили двухдверку Mercedes 190 SL. Можете себе представить уровень эстетического шока
+            посетителей тогдашнего мотор-шоу. Под кузовом пленительной красоты скрывалась укороченная платформа от
+            седана Mercedes W120 Ponton и стальной монокок. Подвеска была полностью независимая — с двухрычажкой спереди
+            и качающимися полуосями сзади. Длина — 4290 мм,расстояние между осями — 2400 мм. </p>
+    </aside>
+
+    <footer class="footer">
+        <div class="left">
+            <h4>Get started</h4>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Руководство</a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Отзывы</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <h4>Поддеожка</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Cправочная служба</a></li>
+                <li><a href="#">Форум</a></li>
+            </ul>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5439.011027816556!2d28.815480978270912!3d47.03031047951022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97e998113b3f5%3A0xc314c794f9836dea!2z0KbQtdC90YLRgCwg0JrQuNGI0LjQvdGR0LIsINCc0L7Qu9C00LDQstC40Y8!5e0!3m2!1sru!2s!4v1588266599041!5m2!1sru!2s"
+                    width="100%" height="240" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+        </div>
+    </footer>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i,
+            slides = document.getElementsByClassName("mySlides"),
+            dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds*/
+    }
+</script>
+
+</body>
+</html>

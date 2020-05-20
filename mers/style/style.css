@@ -1,0 +1,292 @@
+/*
+font-family: 'Kaushan Script', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #000000, #141414, #212121, #2e2e2e, #3c3c3c, #3e3e3e, #414041,
+    #434243, #3a3839, #312e2f, #282525, #1f1c1b);
+
+
+    color: #d1d1d1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+    max-width: 1170px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "h h h" "sld sld sld" "s s a" "f f f";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 720px 1fr ;
+    grid-gap: 15px;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: h;
+    display: grid;
+    grid-template-areas: "ld m";
+    grid-template-columns: 35% 1fr;
+    grid-gap: 10px;
+
+}
+
+.logo_defiz{
+    grid-area: ld;
+    margin: 0 auto;
+}
+
+.logo_defiz h1{
+    font-family: 'Kaushan Script', cursive;
+}
+
+.logo img{
+    width: 170px;
+}
+
+.menu{
+    grid-area: m;
+    margin: 140px 1%;
+
+
+}
+
+.menu li{
+    list-style: none;
+    display: inline-grid;
+    background: #10171f;
+    border-radius: 8px;
+
+}
+
+.menu li:hover{
+    background: rgba(228, 255, 250, 0.91);
+    cursor: pointer;
+}
+
+.menu a{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    transition: all .3s;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.menu a:hover{
+    background: #000;
+    transition: 1s ease;
+}
+
+.slideShow-container {
+    grid-area: sld;
+    display: grid;
+    text-align: center;
+}
+
+.slideShow-container img{
+    width: 90%;
+}
+
+
+.active {
+    background-color: #717171;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #323232;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.section{
+    grid-area: s;
+
+}
+
+.aside{
+    grid-area: a;
+
+}
+
+.footer{
+    grid-area: f;
+    background-color: #505050;
+    color: white;
+    display: grid;
+    text-align: center;
+    grid-template-areas: "l c r" "map map map";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+
+
+}
+
+.footer ul{
+    list-style-type: none;
+    line-height: 1.7;
+    padding-left: 0;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+.left{
+    grid-area: l;
+}
+.center{
+    grid-area: c;
+}
+.right{
+    grid-area: r;
+}
+
+.map{
+    grid-area: map;
+}
+
+
+
+@media screen and (max-width: 900px){
+
+   .header{
+       grid-template-areas: "ld m";
+       grid-template-columns: 35% auto;
+   }
+
+    .menu {
+        margin: 0 auto;
+    }
+    .menu li{
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+
+    .wrapper {
+        grid-template-areas: "h" "sld" "s" "a" "f";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto 1fr 1fr ;
+    }
+
+    .logo_defiz{
+        text-align: center;
+        font-size: x-small;
+    }
+
+    .menu{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .menu ul{
+        margin-right: 50px;
+    }
+
+    .menu li{
+        display: block;
+        border: #323232;
+        color: black;
+    }
+
+    .footer{
+        grid-template-areas: "l c" "r map";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .map{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    /*.wrapper {
+        grid-template-areas: "h" "sld" "s" "a" "f";
+
+        grid-template-rows: 1fr 1fr 1fr 1fr 100px;
+    }*/
+
+    .header{
+        grid-template-areas: "ld" "m";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1.5fr;
+
+    }
+
+    .logo_defiz{
+        text-align: center;
+        font-size: small;
+    }
+    .menu{
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .footer{
+        grid-template-areas: "l" "c" "r " "map";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .wrapper{
+        grid-template-rows: auto;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    .map{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 230px){
+    .header{
+        display: none;
+    }
+
+}
