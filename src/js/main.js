@@ -94,8 +94,7 @@ countBtn.addEventListener('click', () => {
     } else {
         dayBudgetValue.textContent = "Error!!!\n Start calculation";
     }
-    countBtn.disabled = true;
-    countBtn.style.background = 'silver';
+
 });
 
 incomeItem.addEventListener('input', () => {
